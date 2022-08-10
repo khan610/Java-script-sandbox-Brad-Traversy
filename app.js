@@ -26,66 +26,98 @@
 
 // console.log(val);
 
-const firstName = 'William';
-const lastName = 'Johnson';
-const age = 36;
-const str = 'Hello there my name is Brad';
-const tags = 'web desing, web developmnet, programming';
+// const firstName = 'William';
+// const lastName = 'Johnson';
+// const age = 36;
+// const str = 'Hello there my name is Brad';
+// const tags = 'web desing, web developmnet, programming';
 
-let val;
+// let val;
 
-val = firstName + lastName;
+// val = firstName + lastName;
 
-// Concatenation
-val = firstName + ' ' + lastName;
+// // Concatenation
+// val = firstName + ' ' + lastName;
 
-console.log(val);
+// console.log(val);
 
-// Append
-val = 'Brad ';
-val += 'Traversy';
+// // Append
+// val = 'Brad ';
+// val += 'Traversy';
 
-val = 'Hello, my name is ' + firstName + ' and I am ' + age;
+// val = 'Hello, my name is ' + firstName + ' and I am ' + age;
 
-// Escaping
-val = "That's awesome, I can't wait";
+// // Escaping
+// val = "That's awesome, I can't wait";
 
-// Length
-val = firstName.length;
+// // Length
+// val = firstName.length;
 
-// concat
-val = firstName.concat(' ', lastName);
+// // concat
+// val = firstName.concat(' ', lastName);
 
-// Change case
-val = firstName.toUpperCase();
-val = firstName.toLowerCase();
+// // Change case
+// val = firstName.toUpperCase();
+// val = firstName.toLowerCase();
 
-val = firstName[2];
+// val = firstName[2];
 
-// indexOf
-val = indexOf('1');
-val = firstName.lastIndexOf('1');
+// // indexOf
+// val = indexOf('1');
+// val = firstName.lastIndexOf('1');
 
-// chArt
-val = firstName.charAt('2');
-// Get last char
-val = firstName.charAt(firstName.length - 1);
+// // chArt
+// val = firstName.charAt('2');
+// // Get last char
+// val = firstName.charAt(firstName.length - 1);
 
-// substring
-val = firstName.substring(0, 4);
+// // substring
+// val = firstName.substring(0, 4);
 
-// slice
-val = firstName.slice(0, 4);
-val = firstName.slice(-3);
+// // slice
+// val = firstName.slice(0, 4);
+// val = firstName.slice(-3);
 
-// split
-val = str.split(' ');
-val = tags.split(',');
+// // split
+// val = str.split(' ');
+// val = tags.split(',');
 
-// replace
-val = str.replace('Brad', 'Jack');
+// // replace
+// val = str.replace('Brad', 'Jack');
 
-// includes
-val = str.includes('Hello');
+// // includes
+// val = str.includes('Hello');
 
-console.log(val);
+// console.log(val);
+
+//
+
+//
+
+///////////////// Template Literals
+
+//
+
+const name = 'John';
+const age = 30;
+const job = 'Web Developer';
+const city = 'Miami';
+let html;
+
+function hello() {
+  return 'hello';
+}
+
+html = `
+<ul>
+  <li>NameL ${name}</li>
+  <li>Age: ${age}</li>
+  <li>Job: ${job}</li>
+  <li>City: ${city}</li>
+  <li>${2 + 2}</li>
+  <li>${hello()}</li>
+  <li>${age > 30 ? 'Over 30' : 'Under 30'}</li>
+</ul>
+`;
+
+document.body.innerHTML = html;
