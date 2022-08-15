@@ -188,40 +188,102 @@
 // console.log(numbers);
 // console.log(val);
 
-const person = {
-  firstName: 'Steve',
-  lastName: 'Smith',
-  age: 30,
-  email: 'steve@aol.com',
-  hobbies: ['music', 'sports'],
-  address: {
-    city: 'Miami',
-    state: 'FL',
-  },
-  getBirthYear: function () {
-    return 2017 - this.age;
-  },
-};
+// const person = {
+//   firstName: 'Steve',
+//   lastName: 'Smith',
+//   age: 30,
+//   email: 'steve@aol.com',
+//   hobbies: ['music', 'sports'],
+//   address: {
+//     city: 'Miami',
+//     state: 'FL',
+//   },
+//   getBirthYear: function () {
+//     return 2017 - this.age;
+//   },
+// };
 
-let val;
+// let val;
 
-val = person;
-// Get specific value
-val = person.firstName;
-val = person['firstName'];
-val = person.age;
-val = person.hobbies[1];
-val = person.address.state;
-val = person.getBirthYear();
+// val = person;
+// // Get specific value
+// val = person.firstName;
+// val = person['firstName'];
+// val = person.age;
+// val = person.hobbies[1];
+// val = person.address.state;
+// val = person.getBirthYear();
 
-console.log(val);
+// console.log(val);
 
-const people = [
-  { name: 'John', age: 30 },
-  { name: 'Mike', age: 23 },
-  { name: 'Nancy', age: 44 },
-];
+// const people = [
+//   { name: 'John', age: 30 },
+//   { name: 'Mike', age: 23 },
+//   { name: 'Nancy', age: 44 },
+// ];
 
-for (let i = 0; i < people.length; i++) {
-  console.log(people[i].name);
+// for (let i = 0; i < people.length; i++) {
+//   console.log(people[i].name);
+// }
+
+//
+
+// //              Dates and Times
+
+// //
+
+// let val;
+
+// const today = new Date('1-1-2017');
+// let birthday = new Date('9-10-1981 11:25:00');
+// birthday = new Date('September 10 1981');
+// birthday = new Date('9/10/1981');
+
+// val = today.getMonth();
+// val = today.getDate();
+// val = today.getDay();
+// val = today.getFullYear();
+
+// console.log(val);
+
+//
+
+//
+
+//
+
+const id = 100;
+
+// EQUAL TO
+if (id == 100) {
+  console.log('CORRECT');
+} else {
+  console.log('INCORRECT');
+}
+
+// NOT EQUAL TO
+if (id != 101) {
+  console.log('CORRECT');
+} else {
+  console.log('INCORRECT');
+}
+
+// EQUAL TO VALUE & TYPE
+if (id === 100) {
+  console.log('CORRECT');
+} else {
+  console.log('INCORRECT');
+}
+
+// EQUAL TO VALUE & TYPE
+if (id !== 100) {
+  console.log('CORRECT');
+} else {
+  console.log('INCORRECT');
+}
+
+if (id) {
+  console.log(`The ID is ${id}`);
+} else {
+  console.log('NO ID');
 }
