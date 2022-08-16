@@ -286,39 +286,85 @@
 // if (id > 200) {
 //   console.log('CORRECT');
 // } else {
-//   console.log('INCORRECT');
+// //   console.log('INCORRECT');
+// // }
+
+// const color = 'yellow';
+
+// if (color === 'red') {
+//   console.log('Color is red');
+// } else if (color === 'blue') {
+//   console.log('Color is blue');
+// } else {
+//   console.log('Color is not red or blue');
 // }
 
-const color = 'yellow';
+// // LOGICAL OPERATORS
 
-if (color === 'red') {
-  console.log('Color is red');
-} else if (color === 'blue') {
-  console.log('Color is blue');
-} else {
-  console.log('Color is not red or blue');
+// const name = 'Steve';
+// const age = 25;
+
+// // And &&
+// if (age > 0 && age < 12) {
+//   console.log(`${name} is a child`);
+// } else if (age >= 13 && age <= 19) {
+//   console.log(`${name} is a teenager`);
+// } else {
+//   console.log(`${name} is an adult`);
+// }
+
+// // OR ||
+// if (age < 16 || age > 65) {
+//   console.log(`${name} can not run in race`);
+// } else {
+//   console.log(`${name} is registered for the race`);
+// }
+
+// // TERNARY OPERATOR
+// console.log(id === 100 ? 'CORRECT' : 'INCORRECT');
+
+//
+
+//
+
+// SWITCHES
+
+//
+
+const color = 'red';
+
+switch (color) {
+  case 'red':
+    console.log('Color is red');
+    break;
+  case 'blue':
+    console.log('Color is blue');
+    break;
+  default:
+    console.log('Color is not red or blue');
+    break;
 }
 
-// LOGICAL OPERATORS
-
-const name = 'Steve';
-const age = 25;
-
-// And &&
-if (age > 0 && age < 12) {
-  console.log(`${name} is a child`);
-} else if (age >= 13 && age <= 19) {
-  console.log(`${name} is a teenager`);
-} else {
-  console.log(`${name} is an adult`);
+switch (new Date().getDay()) {
+  case 1:
+    day = 'Sunday';
+    break;
+  case 2:
+    day = 'Monday';
+    break;
+  case 3:
+    day = 'Tuesday';
+    break;
+  case 4:
+    day = 'Wednesday';
+    break;
+  case 5:
+    day = 'Thursday';
+    break;
+  case 6:
+    day = 'Friday';
+    break;
+  case 7:
+    day = 'Suturday';
+    break;
 }
-
-// OR ||
-if (age < 16 || age > 65) {
-  console.log(`${name} can not run in race`);
-} else {
-  console.log(`${name} is registered for the race`);
-}
-
-// TERNARY OPERATOR
-console.log(id === 100 ? 'CORRECT' : 'INCORRECT');
