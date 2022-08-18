@@ -331,40 +331,86 @@
 
 //
 
-const color = 'red';
+// const color = 'red';
 
-switch (color) {
-  case 'red':
-    console.log('Color is red');
-    break;
-  case 'blue':
-    console.log('Color is blue');
-    break;
-  default:
-    console.log('Color is not red or blue');
-    break;
+// switch (color) {
+//   case 'red':
+//     console.log('Color is red');
+//     break;
+//   case 'blue':
+//     console.log('Color is blue');
+//     break;
+//   default:
+//     console.log('Color is not red or blue');
+//     break;
+// }
+
+// switch (new Date().getDay()) {
+//   case 1:
+//     day = 'Sunday';
+//     break;
+//   case 2:
+//     day = 'Monday';
+//     break;
+//   case 3:
+//     day = 'Tuesday';
+//     break;
+//   case 4:
+//     day = 'Wednesday';
+//     break;
+//   case 5:
+//     day = 'Thursday';
+//     break;
+//   case 6:
+//     day = 'Friday';
+//     break;
+//   case 7:
+//     day = 'Suturday';
+//     break;
+// }
+
+// FUNCTION DECLARATIONS
+
+function greet(firstName = 'John', lastName = 'Doe') {
+  //console.log('Hello');
+  return 'Hello' + firstName + ' ' + lastName;
 }
 
-switch (new Date().getDay()) {
-  case 1:
-    day = 'Sunday';
-    break;
-  case 2:
-    day = 'Monday';
-    break;
-  case 3:
-    day = 'Tuesday';
-    break;
-  case 4:
-    day = 'Wednesday';
-    break;
-  case 5:
-    day = 'Thursday';
-    break;
-  case 6:
-    day = 'Friday';
-    break;
-  case 7:
-    day = 'Suturday';
-    break;
-}
+// console.log(greet('Steve', 'Ninic'));
+
+// FUNCTION EXPRESIONS
+
+const square = function square(x = 3) {
+  return x * x;
+};
+
+// console.log(square());
+
+// IMMIDIATLEY INVOKABLE FUNCTION EXPRESSIONS - IIFEs
+
+// (function () {
+//   console.log('IIFE Ran..');
+// })();
+
+// (function (name) {
+//   console.log('Hello ' + name);
+// })('Brad');
+
+// PROPERTY METHODS - When function is put inside object its called method
+
+const todo = {
+  add: function () {
+    console.log('Add todo...');
+  },
+  edit: function (id) {
+    console.log(`Edit todo ${id}`);
+  },
+};
+
+todo.delete = function () {
+  console.log('Delete todo....');
+};
+
+todo.add();
+todo.edit(22);
+todo.delete();
