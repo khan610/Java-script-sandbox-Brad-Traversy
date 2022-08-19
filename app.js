@@ -369,48 +369,103 @@
 //     break;
 // }
 
-// FUNCTION DECLARATIONS
+// // FUNCTION DECLARATIONS
 
-function greet(firstName = 'John', lastName = 'Doe') {
-  //console.log('Hello');
-  return 'Hello' + firstName + ' ' + lastName;
-}
+// function greet(firstName = 'John', lastName = 'Doe') {
+//   //console.log('Hello');
+//   return 'Hello' + firstName + ' ' + lastName;
+// }
 
-// console.log(greet('Steve', 'Ninic'));
+// // console.log(greet('Steve', 'Ninic'));
 
-// FUNCTION EXPRESIONS
+// // FUNCTION EXPRESIONS
 
-const square = function square(x = 3) {
-  return x * x;
-};
+// const square = function square(x = 3) {
+//   return x * x;
+// };
 
-// console.log(square());
+// // console.log(square());
 
-// IMMIDIATLEY INVOKABLE FUNCTION EXPRESSIONS - IIFEs
+// // IMMIDIATLEY INVOKABLE FUNCTION EXPRESSIONS - IIFEs
 
-// (function () {
-//   console.log('IIFE Ran..');
-// })();
+// // (function () {
+// //   console.log('IIFE Ran..');
+// // })();
 
-// (function (name) {
-//   console.log('Hello ' + name);
-// })('Brad');
+// // (function (name) {
+// //   console.log('Hello ' + name);
+// // })('Brad');
 
-// PROPERTY METHODS - When function is put inside object its called method
+// // PROPERTY METHODS - When function is put inside object its called method
 
-const todo = {
-  add: function () {
-    console.log('Add todo...');
-  },
-  edit: function (id) {
-    console.log(`Edit todo ${id}`);
-  },
-};
+// const todo = {
+//   add: function () {
+//     console.log('Add todo...');
+//   },
+//   edit: function (id) {
+//     console.log(`Edit todo ${id}`);
+//   },
+// };
 
-todo.delete = function () {
-  console.log('Delete todo....');
-};
+// todo.delete = function () {
+//   console.log('Delete todo....');
+// };
 
-todo.add();
-todo.edit(22);
-todo.delete();
+// todo.add();
+// todo.edit(22);
+// todo.delete();
+
+//
+
+// GENERAL LOOPS
+
+//
+
+// FOR LOOP
+
+// for (let i = 0; i < 10; i++) {
+//   if (i === 2) {
+//     console.log('2 is my favorite number');
+//     continue;
+//   }
+
+//   if (i === 5) {
+//     console.log('Stop the loop');
+//     break;
+//   }
+
+//   console.log('Number ' + i);
+// }
+
+// WHILE LOOP
+
+// let i = 0;
+
+// while (i < 10) {
+//   console.log('Number ' + i);
+//   i++;
+// }
+
+// DO WHILE
+
+// let i = 0;
+
+// do {
+//   console.log('Number ' + i);
+//   i++;
+// }
+
+// while (i < 10);
+
+// // LOOP THROUGH ARRAY
+// const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
+// cars[1];
+
+// for (let i = 0; i < cars.length; i++) {
+//   console.log(cars[i]);
+// }
+
+// // FOREACH
+// cars.forEach(function (car) {
+//   console.log(car);
+// });
