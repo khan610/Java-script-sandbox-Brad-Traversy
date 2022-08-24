@@ -518,39 +518,75 @@
 //   console.log('NO');
 // }
 
-let val;
+// let val;
 
-// Outter height and width
-val = window.outerHeight;
-val = window.outerWidth;
+// // Outter height and width
+// val = window.outerHeight;
+// val = window.outerWidth;
 
-// Inner height and width
-val = window.innerHeight;
-val = window.innerWidth;
+// // Inner height and width
+// val = window.innerHeight;
+// val = window.innerWidth;
 
-// Scroll points
-val = window.scrollY;
-val = window.scrollX;
+// // Scroll points
+// val = window.scrollY;
+// val = window.scrollX;
 
-// LOCATION OBJECT - part of Window Object
+// // LOCATION OBJECT - part of Window Object
 
-val = window.location;
-val = window.location.hostname;
-val = window.location.port;
-val = window.location.href;
-val = window.location.search;
+// val = window.location;
+// val = window.location.hostname;
+// val = window.location.port;
+// val = window.location.href;
+// val = window.location.search;
 
-// Redirect object
-// window.location.href = 'http://google.com';
-// Reload
-// window.location.reload();
+// // Redirect object
+// // window.location.href = 'http://google.com';
+// // Reload
+// // window.location.reload();
 
-// HISTORY OBJECT
+// // HISTORY OBJECT
 
-// Window.history.go(-2);
-// val = window.history.length;
+// // Window.history.go(-2);
+// // val = window.history.length;
 
-// Navigator Object
-val = window.navigator;
+// // Navigator Object
+// val = window.navigator;
 
-console.log(val);
+// console.log(val);
+
+//
+
+// Block Scope with let and const
+
+//
+
+//
+
+// Global Scope
+var a = 1;
+let b = 2;
+const c = 3;
+
+// function test() {
+//   var a = 4;
+//   let b = 5;
+//   const c = 6;
+//   console.log('Function Scope: ', a, b, c);
+// }
+
+// test();
+
+// if (true) {
+//   // Block Scope
+//   var a = 4;
+//   let b = 6;
+//   const c = 7;
+//   console.log('If Scope: ', a, b, c);
+// }
+
+// for (var a = 0; a < 10; a++) {
+//   console.log(`Loop: ${a}`);
+// }
+
+console.log('Global Scope: ', a, b, c);
