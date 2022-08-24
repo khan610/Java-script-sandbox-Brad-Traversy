@@ -471,27 +471,86 @@
 //   console.log(array);
 // });
 
-// MAP
-const users = [
-  { id: 1, name: 'Jonh' },
-  { id: 2, name: 'Sara' },
-  { id: 3, name: 'Karen' },
-  { id: 4, name: 'Steve' },
-];
+// // MAP
+// const users = [
+//   { id: 1, name: 'Jonh' },
+//   { id: 2, name: 'Sara' },
+//   { id: 3, name: 'Karen' },
+//   { id: 4, name: 'Steve' },
+// ];
 
-const ids = users.map(function (user) {
-  return user.id;
-});
+// const ids = users.map(function (user) {
+//   return user.id;
+// });
 
-console.log(ids);
+// console.log(ids);
 
-// FOR IN LOOP
-const user = {
-  firstName: 'Jonh',
-  lastName: 'Doe',
-  age: 40,
-};
+// // FOR IN LOOP
+// const user = {
+//   firstName: 'Jonh',
+//   lastName: 'Doe',
+//   age: 40,
+// };
 
-for (let x in user) {
-  console.log(`${x} : ${user[x]}`);
-}
+// for (let x in user) {
+//   console.log(`${x} : ${user[x]}`);
+// }
+
+//
+
+//
+
+// WINDOW - OBJECTS / METHODS / PROPERTIES
+
+//
+
+// Alert
+// window.alert('Hello World');
+
+// Prompt
+// const input = prompt();
+// alert(input);
+
+// Confirm
+// if (confirm('Are you sure?')) {
+//   console.log('YES');
+// } else {
+//   console.log('NO');
+// }
+
+let val;
+
+// Outter height and width
+val = window.outerHeight;
+val = window.outerWidth;
+
+// Inner height and width
+val = window.innerHeight;
+val = window.innerWidth;
+
+// Scroll points
+val = window.scrollY;
+val = window.scrollX;
+
+// LOCATION OBJECT - part of Window Object
+
+val = window.location;
+val = window.location.hostname;
+val = window.location.port;
+val = window.location.href;
+val = window.location.search;
+
+// Redirect object
+// window.location.href = 'http://google.com';
+// Reload
+// window.location.reload();
+
+// HISTORY OBJECT
+
+// Window.history.go(-2);
+// val = window.history.length;
+
+// Navigator Object
+val = window.navigator;
+
+console.log(val);
