@@ -305,36 +305,86 @@
 //   console.log(val);
 // }
 
-const clearBtn = document.querySelector('.clear-tasks');
-const card = document.querySelector('.card');
+// const clearBtn = document.querySelector('.clear-tasks');
+// const card = document.querySelector('.card');
+// const heading = document.querySelector('h5');
+
+// // // Click
+// // clearBtn.addEventListener('click', runEvent);
+// // // Doubleclick
+// // clearBtn.addEventListener('dblclick', runEvent);
+// // MouseDown
+// clearBtn.addEventListener('mousedown', runEvent);
+// // MouseUp
+// clearBtn.addEventListener('mouseup', runEvent);
+// // Mouse enter
+// card.addEventListener('mouseenter', runEvent);
+// // Mouse leave
+// card.addEventListener('mouseleave', runEvent);
+
+// // Mouse over
+// card.addEventListener('mouseover', runEvent);
+// // Mouse out
+// card.addEventListener('mouseout', runEvent);
+
+// // Mousemove
+// card.addEventListener('mousemove', runEvent);
+
+// // EventHandler
+// function runEvent(e) {
+//   console.log(`EVENT TYPE: ${e.type}`);
+
+//   heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;
+
+//   document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
+// }
+
+const form = document.querySelector('form');
+const taskInput = document.getElementById('task');
 const heading = document.querySelector('h5');
+const select = document.querySelector('select');
 
-// // Click
-// clearBtn.addEventListener('click', runEvent);
-// // Doubleclick
-// clearBtn.addEventListener('dblclick', runEvent);
-// MouseDown
-clearBtn.addEventListener('mousedown', runEvent);
-// MouseUp
-clearBtn.addEventListener('mouseup', runEvent);
-// Mouse enter
-card.addEventListener('mouseenter', runEvent);
-// Mouse leave
-card.addEventListener('mouseleave', runEvent);
+// Clear input
+taskInput.value = '';
 
-// Mouse over
-card.addEventListener('mouseover', runEvent);
-// Mouse out
-card.addEventListener('mouseout', runEvent);
+// form.addEventListener('submit', runEvent)
 
-// Mousemove
-card.addEventListener('mousemove', runEvent);
+// KEYDOWN
+taskInput.addEventListener('keydown', runEvent);
 
-// EventHandler
+// KEYUP
+taskInput.addEventListener('keyup', runEvent);
+
+// KEYPRESS
+taskInput.addEventListener('keypress', runEvent);
+
+// Focus
+taskInput.addEventListener('focus', runEvent);
+
+// Blur
+taskInput.addEventListener('blur', runEvent);
+
+// Cut
+taskInput.addEventListener('cut', runEvent);
+
+// Paste
+taskInput.addEventListener('paste', runEvent);
+
+// Input
+taskInput.addEventListener('input', runEvent);
+
+// Change
+select.addEventListener('change', runEvent);
+
 function runEvent(e) {
   console.log(`EVENT TYPE: ${e.type}`);
 
-  heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;
+  // console.log(e.target.value);
 
-  document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
+  // heading.innerText = e.target.value;
+
+  // // Get input value
+  // console.log(taskInput.value);
+
+  // e.preventDefault();
 }
