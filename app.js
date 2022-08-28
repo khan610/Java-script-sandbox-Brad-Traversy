@@ -126,19 +126,19 @@
 
 // console.log(items);
 
-let val;
+// let val;
 
-const list = document.querySelector('ul.collection');
-const listItem = document.querySelector('li.collection-item:first-child');
+// const list = document.querySelector('ul.collection');
+// const listItem = document.querySelector('li.collection-item:first-child');
 
-val = listItem;
-val = list;
+// val = listItem;
+// val = list;
 
-// Get child nodes
-val = list.childNodes;
-val = list.childNodes[0];
-val = list.childNodes[0].nodeName;
-val = list.childNodes[3].nodeType;
+// // Get child nodes
+// val = list.childNodes;
+// val = list.childNodes[0];
+// val = list.childNodes[0].nodeName;
+// val = list.childNodes[3].nodeType;
 
 // 1 - Element
 // 2 - Attribute (deprecated)
@@ -184,32 +184,85 @@ val = list.childNodes[3].nodeType;
 
 // Create Element
 
-const li = document.createElement('li');
+// const li = document.createElement('li');
 
-// Add class
+// // Add class
 
-li.className = 'collection-item';
+// li.className = 'collection-item';
 
+// // Add id
+// li.id = 'new-item';
+
+// // Add attribute
+// li.setAttribute('title', 'New Item');
+
+// // Create text node and append
+// li.appendChild(document.createTextNode('Hello World'));
+
+// // Create new link element
+// const link = document.createElement('a');
+// // Add classes
+// link.className = 'delete-item secondary-content';
+// // Add icon html
+// link.innerHTML = '<i class="fa fa-remove"></i>';
+
+// // Append link into li
+// li.appendChild(link);
+
+// // Append li as child to ul
+// document.querySelector('ul.collection').appendChild(li);
+
+// console.log(li);
+
+// REPLACE ELEMENT
+
+// Create Element
+const newHeading = document.createElement('h2');
 // Add id
-li.id = 'new-item';
+newHeading.id = 'task-title';
+// New text node
+newHeading.appendChild(document.createTextNode('Task List'));
 
-// Add attribute
-li.setAttribute('title', 'New Item');
+// Get the old heading
+const oldHeading = document.getElementById('task-title');
+// Parent
+const cardAction = document.querySelector('.card-action');
 
-// Create text node and append
-li.appendChild(document.createTextNode('Hello World'));
+// Replace
+cardAction.replaceChild('.card-action');
 
-// Create new link element
-const link = document.createElement('a');
-// Add classes
-link.className = 'delete-item secondary-content';
-// Add icon html
-link.innerHTML = '<i class="fa fa-remove"></i>';
+// Replace
+cardAction.replaceChild(newHeading, oldHeading);
 
-// Append link into li
-li.appendChild(link);
+// REMOVE ELEMENT
+const lis = document.querySelectorAll('li');
+const list = document.querySelector('ul');
 
-// Append li as child to ul
-document.querySelector('ul.collection').appendChild(li);
+// Remove list item
+lis[0].remove();
 
-console.log(li);
+// Remove child element
+list.removeChild(lis[3]);
+
+// Classes & ATTR
+const firstLi = document.querySelector('li:first-child');
+const link = firstLi.children[0];
+
+let val;
+
+val = link.className;
+val = link.classList;
+val = link.classList[0];
+link.classList.add('test');
+link.classList.remove('test');
+val = link;
+
+// Attributes
+val = link.getAttribute('href');
+val = link.setAttribute('href', 'http://google.com');
+link.setAttribute('title', 'Google');
+
+val = link.hasAttribute('href');
+link.removeAttribute('title');
+
+console.log(val);
