@@ -339,52 +339,52 @@
 //   document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
 // }
 
-const form = document.querySelector('form');
-const taskInput = document.getElementById('task');
-const heading = document.querySelector('h5');
-const select = document.querySelector('select');
+// const form = document.querySelector('form');
+// const taskInput = document.getElementById('task');
+// const heading = document.querySelector('h5');
+// const select = document.querySelector('select');
 
-// Clear input
-taskInput.value = '';
+// // Clear input
+// taskInput.value = '';
 
-// form.addEventListener('submit', runEvent)
+// // form.addEventListener('submit', runEvent)
 
-// KEYDOWN
-taskInput.addEventListener('keydown', runEvent);
+// // KEYDOWN
+// taskInput.addEventListener('keydown', runEvent);
 
-// KEYUP
-taskInput.addEventListener('keyup', runEvent);
+// // KEYUP
+// taskInput.addEventListener('keyup', runEvent);
 
-// KEYPRESS
-taskInput.addEventListener('keypress', runEvent);
+// // KEYPRESS
+// taskInput.addEventListener('keypress', runEvent);
 
-// Focus
-taskInput.addEventListener('focus', runEvent);
+// // Focus
+// taskInput.addEventListener('focus', runEvent);
 
-// Blur
-taskInput.addEventListener('blur', runEvent);
+// // Blur
+// taskInput.addEventListener('blur', runEvent);
 
-// Cut
-taskInput.addEventListener('cut', runEvent);
+// // Cut
+// taskInput.addEventListener('cut', runEvent);
 
-// Paste
-taskInput.addEventListener('paste', runEvent);
+// // Paste
+// taskInput.addEventListener('paste', runEvent);
 
-// Input
-taskInput.addEventListener('input', runEvent);
+// // Input
+// taskInput.addEventListener('input', runEvent);
 
-// Change
-select.addEventListener('change', runEvent);
+// // Change
+// select.addEventListener('change', runEvent);
 
-function runEvent(e) {
-  console.log(`EVENT TYPE: ${e.type}`);
+// function runEvent(e) {
+//   console.log(`EVENT TYPE: ${e.type}`);
 
-  // console.log(e.target.value);
+//   // console.log(e.target.value);
 
-  // heading.innerText = e.target.value;
+//   // heading.innerText = e.target.value;
 
-  // // Get input value
-  // console.log(taskInput.value);
+//   // // Get input value
+//   // console.log(taskInput.value);
 
-  // e.preventDefault();
-}
+//   // e.preventDefault();
+// }
