@@ -278,196 +278,216 @@
 // function onClick(e) {
 //   console.log('Clicked');
 
-//   let val;
+// //   let val;
 
-//   val = e;
+// //   val = e;
 
-//   // Event target elemnt
-//   val = e.target;
-//   val = e.target.id;
-//   val = e.target.className;
-//   val = e.target.classList;
+// //   // Event target elemnt
+// //   val = e.target;
+// //   val = e.target.id;
+// //   val = e.target.className;
+// //   val = e.target.classList;
 
-//   // Event type
-//   val = e.type;
+// //   // Event type
+// //   val = e.type;
 
-//   // Timestamp
-//   val = e.timeStamp;
+// //   // Timestamp
+// //   val = e.timeStamp;
 
-//   // Coords event relative to the window
-//   val = e.clientY;
-//   val = e.clientX;
+// //   // Coords event relative to the window
+// //   val = e.clientY;
+// //   val = e.clientX;
 
-//   // Coords event relative to the element
-//   val = e.offsetY;
-//   val = e.offsetX;
+// //   // Coords event relative to the element
+// //   val = e.offsetY;
+// //   val = e.offsetX;
 
-//   console.log(val);
-// }
+// //   console.log(val);
+// // }
 
-// const clearBtn = document.querySelector('.clear-tasks');
-// const card = document.querySelector('.card');
-// const heading = document.querySelector('h5');
+// // const clearBtn = document.querySelector('.clear-tasks');
+// // const card = document.querySelector('.card');
+// // const heading = document.querySelector('h5');
 
-// // // Click
-// // clearBtn.addEventListener('click', runEvent);
-// // // Doubleclick
-// // clearBtn.addEventListener('dblclick', runEvent);
-// // MouseDown
-// clearBtn.addEventListener('mousedown', runEvent);
-// // MouseUp
-// clearBtn.addEventListener('mouseup', runEvent);
-// // Mouse enter
-// card.addEventListener('mouseenter', runEvent);
-// // Mouse leave
-// card.addEventListener('mouseleave', runEvent);
+// // // // Click
+// // // clearBtn.addEventListener('click', runEvent);
+// // // // Doubleclick
+// // // clearBtn.addEventListener('dblclick', runEvent);
+// // // MouseDown
+// // clearBtn.addEventListener('mousedown', runEvent);
+// // // MouseUp
+// // clearBtn.addEventListener('mouseup', runEvent);
+// // // Mouse enter
+// // card.addEventListener('mouseenter', runEvent);
+// // // Mouse leave
+// // card.addEventListener('mouseleave', runEvent);
 
-// // Mouse over
-// card.addEventListener('mouseover', runEvent);
-// // Mouse out
-// card.addEventListener('mouseout', runEvent);
+// // // Mouse over
+// // card.addEventListener('mouseover', runEvent);
+// // // Mouse out
+// // card.addEventListener('mouseout', runEvent);
 
-// // Mousemove
-// card.addEventListener('mousemove', runEvent);
+// // // Mousemove
+// // card.addEventListener('mousemove', runEvent);
 
-// // EventHandler
-// function runEvent(e) {
-//   console.log(`EVENT TYPE: ${e.type}`);
+// // // EventHandler
+// // function runEvent(e) {
+// //   console.log(`EVENT TYPE: ${e.type}`);
 
-//   heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;
+// //   heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;
 
-//   document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
-// }
+// //   document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
+// // }
 
-// const form = document.querySelector('form');
-// const taskInput = document.getElementById('task');
-// const heading = document.querySelector('h5');
-// const select = document.querySelector('select');
+// // const form = document.querySelector('form');
+// // const taskInput = document.getElementById('task');
+// // const heading = document.querySelector('h5');
+// // const select = document.querySelector('select');
 
-// // Clear input
-// taskInput.value = '';
+// // // Clear input
+// // taskInput.value = '';
 
-// // form.addEventListener('submit', runEvent)
+// // // form.addEventListener('submit', runEvent)
 
-// // KEYDOWN
-// taskInput.addEventListener('keydown', runEvent);
+// // // KEYDOWN
+// // taskInput.addEventListener('keydown', runEvent);
 
-// // KEYUP
-// taskInput.addEventListener('keyup', runEvent);
+// // // KEYUP
+// // taskInput.addEventListener('keyup', runEvent);
 
-// // KEYPRESS
-// taskInput.addEventListener('keypress', runEvent);
+// // // KEYPRESS
+// // taskInput.addEventListener('keypress', runEvent);
 
-// // Focus
-// taskInput.addEventListener('focus', runEvent);
+// // // Focus
+// // taskInput.addEventListener('focus', runEvent);
 
-// // Blur
-// taskInput.addEventListener('blur', runEvent);
+// // // Blur
+// // taskInput.addEventListener('blur', runEvent);
 
-// // Cut
-// taskInput.addEventListener('cut', runEvent);
+// // // Cut
+// // taskInput.addEventListener('cut', runEvent);
 
-// // Paste
-// taskInput.addEventListener('paste', runEvent);
+// // // Paste
+// // taskInput.addEventListener('paste', runEvent);
 
-// // Input
-// taskInput.addEventListener('input', runEvent);
+// // // Input
+// // taskInput.addEventListener('input', runEvent);
 
-// // Change
-// select.addEventListener('change', runEvent);
+// // // Change
+// // select.addEventListener('change', runEvent);
 
-// function runEvent(e) {
-//   console.log(`EVENT TYPE: ${e.type}`);
+// // function runEvent(e) {
+// //   console.log(`EVENT TYPE: ${e.type}`);
 
-//   // console.log(e.target.value);
+// //   // console.log(e.target.value);
 
-//   // heading.innerText = e.target.value;
+// //   // heading.innerText = e.target.value;
 
-//   // // Get input value
-//   // console.log(taskInput.value);
+// //   // // Get input value
+// //   // console.log(taskInput.value);
 
-//   // e.preventDefault();
-// }
+// //   // e.preventDefault();
+// // }
 
-// EVENT BUBBLING
+// // EVENT BUBBLING
 
-// document.querySelector('.card-title').addEventListener('click', function () {
-//   console.log('card title');
+// // document.querySelector('.card-title').addEventListener('click', function () {
+// //   console.log('card title');
+// // });
+
+// // document.querySelector('.card-content').addEventListener('click', function () {
+// //   console.log('card content');
+// // });
+
+// // document.querySelector('.card').addEventListener('click', function () {
+// //   console.log('card');
+// // });
+
+// // document.querySelector('.col').addEventListener('click', function () {
+// //   console.log('col');
+// // });
+
+// // EVENT DELGATION
+
+// // const delItem = document.querySelector('.delete-item');
+
+// // deleteItem.addEventListener('click', deleteItem);
+
+// // document.body.addEventListener('click', deleteItem);
+
+// // function deleteItem(e) {
+// //   console.log('delete item');
+// //   console.log(e.target);
+// //   // if (e.target.parentElement.className === 'delete-item secondary-content') {
+// //   //   console.log('delete item');
+// //   // }
+// //   if (e.target.parentElement.classList.contains('delete-item')) {
+// //     console.log('delete item');
+// //     e.target.parentElement.parentElement.remove();
+// //   }
+// // }
+
+// // set local storage item
+// localStorage.setItem('name', 'John');
+// localStorage.setItem('age', '30');
+
+// // // set session storage item
+// // sessionStorage.setItem('name', 'Beth');
+
+// // // remove from storage
+// // localStorage.removeItem('name');
+
+// // get from storage
+// // const name = localStorage.getItem('name');
+// // const age = localStorage.getItem('age');
+
+// // // clear local storage
+// // localStorage.clear();
+
+// // console.log(name, age);
+
+// // document.querySelector('form').addEventListener('submit', function (e) {
+// //   const task = document.getElementById('task').value;
+
+// //   let tasks;
+
+// //   if (localStorage.getItem('tasks') === null) {
+// //     tasks = [];
+// //   } else {
+// //     tasks = JSON.parse(localStorage.getItem('tasks'));
+// //   }
+
+// //   tasks.push(task);
+
+// //   localStorage.setItem('task', JSON.stringify(tasks));
+
+// //   alert('Task saved');
+
+//   e.preventDefault();
 // });
 
-// document.querySelector('.card-content').addEventListener('click', function () {
-//   console.log('card content');
+// const tasks = JSON.parse(localStorage.getItem(tasks));
+
+// tasks.forEach(function (task) {
+//   console.log(task);
 // });
 
-// document.querySelector('.card').addEventListener('click', function () {
-//   console.log('card');
-// });
+// Constructors and the 'this' Keyword
 
-// document.querySelector('.col').addEventListener('click', function () {
-//   console.log('col');
-// });
+// Person constructor
+function Person(name) {
+  this.name = name;
+  // this.age = age;
+  this.birthday = new Date(dob);
+  this.calcAge = function () {
+    const diff = Date.now() - this.birthday.getTime();
+    const ageDate = new Date(diff);
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+  };
+}
 
-// EVENT DELGATION
+// const brad = new Person('Brad');
+// const john = new Person('John');
 
-// const delItem = document.querySelector('.delete-item');
-
-// deleteItem.addEventListener('click', deleteItem);
-
-// document.body.addEventListener('click', deleteItem);
-
-// function deleteItem(e) {
-//   console.log('delete item');
-//   console.log(e.target);
-//   // if (e.target.parentElement.className === 'delete-item secondary-content') {
-//   //   console.log('delete item');
-//   // }
-//   if (e.target.parentElement.classList.contains('delete-item')) {
-//     console.log('delete item');
-//     e.target.parentElement.parentElement.remove();
-//   }
-// }
-
-// set local storage item
-localStorage.setItem('name', 'John');
-localStorage.setItem('age', '30');
-
-// // set session storage item
-// sessionStorage.setItem('name', 'Beth');
-
-// // remove from storage
-// localStorage.removeItem('name');
-
-// get from storage
-const name = localStorage.getItem('name');
-const age = localStorage.getItem('age');
-
-// clear local storage
-localStorage.clear();
-
-console.log(name, age);
-
-document.querySelector('form').addEventListener('submit', function (e) {
-  const task = document.getElementById('task').value;
-
-  let tasks;
-
-  if (localStorage.getItem('tasks') === null) {
-    tasks = [];
-  } else {
-    tasks = JSON.parse(localStorage.getItem('tasks'));
-  }
-
-  tasks.push(task);
-
-  localStorage.setItem('task', JSON.stringify(tasks));
-
-  alert('Task saved');
-
-  e.preventDefault();
-});
-
-const tasks = JSON.parse(localStorage.getItem(tasks));
-
-tasks.forEach(function (task) {
-  console.log(task);
-});
+const brad = new Person('Brad', '9-10-1981');
+console.log(brad.calculateAge());
