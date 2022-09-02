@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "company": "123 Designs",
+    "phone": "444-0123214"
+  },
+  {
+    "id": 2,
+    "name": "Khan Doe",
+    "company": "Khan Production",
+    "phone": "444-324645645"
+  },
+  {
+    "id": 3,
+    "name": "Bahamut Doe",
+    "company": "Dragon Slayers",
+    "phone": "444-345345345345"
+  }
+]

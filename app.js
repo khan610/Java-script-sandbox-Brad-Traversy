@@ -694,32 +694,149 @@
 
 // console.log(Person.addNumbers(1, 2));
 
-class Person {
-  constructor(firstName, lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-  }
+// class Person {
+//   constructor(firstName, lastName) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//   }
 
-  greeting() {
-    return `Hello there ${this.firstName} ${this.lastName}`;
-  }
+//   greeting() {
+//     return `Hello there ${this.firstName} ${this.lastName}`;
+//   }
+// }
+
+// class Customer extends Person {
+//   constructor(firstName, lastName, phone, membership) {
+//     super(firstName, lastName);
+
+//     this.phone = phone;
+//     this.membership = membership;
+//   }
+
+//   static getMembershipCost() {
+//     return 500;
+//   }
+// }
+
+// const john = new Customer('John', 'Doe', '555-555-5555', 'Standard');
+
+// console.log(john.greeting);
+
+// console.log(Customer.getMembershipCost());
+
+// document.getElementById('button').addEventListener('click', loadData);
+
+// function loadData() {
+//   // Create an XHR Object
+//   const xhr = new XMLHttpRequest();
+
+//   // OPEN
+//   xhr.open('GET', 'data.txt', true);
+
+//   // Optional - Used for spinners/loaders
+//   xhr.onprogress = function () {
+//     console.log('READYSTATE', xhr.readyState);
+//   };
+
+//   xhr.onerror = function () {
+//     console.log('Request error....');
+//   };
+
+//   xhr.onload = function () {
+//     console.log('READYSTATE', xhr.readyState);
+//     if (this.status === 200) {
+//       console.log(this.responseText);
+//       document.getElementById(
+//         'output'
+//       ).innerHTML = `<h1>${this.responseText}</h1>`;
+//     }
+//   };
+
+//   // xhr.onreadystatechange = function () {
+//   //   console.log('READYSTATE', xhr.readyState);
+//   //   if (this.status === 200 && this.readyState === 4) {
+//   //     console.log(this.responseText);
+//   //   }
+//   // };
+
+//   xhr.send();
+
+//   // readyState Values
+//   // 0: request not initialized
+//   // 1: server connection established
+//   // 3: processing request
+//   // 4: request finished and response is read
+
+//   // HTTP Statuses
+//   // 200: "OK"
+//   // 403: "Forbidden"
+//   // 404: "Not Found"
+// }
+
+document.getElementById('button1').addEventListener('click', loadCustomer);
+
+document.getElementById('button2').addEventListener('click', loadCustomers);
+
+// Load Customer
+
+function loadCustomer(e) {
+  const xhr = new XMLHttpRequest();
+
+  xhr.open('GET', 'customer.json', true);
+
+  xhr.onload = function () {
+    if (this.status === 200) {
+      const customer = JSON.parse(this.responseText);
+
+      const output = `
+        <ul>
+          <li>
+            ID: ${customer.id}
+          </li>
+          <li>Name: ${customer.name}
+          </li>
+          <li>Company: ${customer.company}</li>
+          <li>Phone: ${customer.phone}</li>
+        </ul>
+      `;
+
+      document.getElementById('customer').innerHTML = output;
+    }
+  };
+
+  xhr.send();
 }
 
-class Customer extends Person {
-  constructor(firstName, lastName, phone, membership) {
-    super(firstName, lastName);
+// Load Customers
 
-    this.phone = phone;
-    this.membership = membership;
-  }
+function loadCustomers(e) {
+  const xhr = new XMLHttpRequest();
 
-  static getMembershipCost() {
-    return 500;
-  }
+  xhr.open('GET', 'customers.json', true);
+
+  xhr.onload = function () {
+    if (this.status === 200) {
+      const customers = JSON.parse(this.responseText);
+
+      let output = '';
+
+      customers.forEach(function (customer) {
+        output += `
+        <ul>
+          <li>
+            ID: ${customer.id}
+          </li>
+          <li> Name: ${customer.name}
+          </li>
+          <li> Company: ${customer.company}</li>
+          <li> Phone: ${customer.phone}</li>
+        </ul>
+      `;
+      });
+
+      document.getElementById('customer').innerHTML = output;
+    }
+  };
+
+  xhr.send();
 }
-
-const john = new Customer('John', 'Doe', '555-555-5555', 'Standard');
-
-console.log(john.greeting);
-
-console.log(Customer.getMembershipCost());
