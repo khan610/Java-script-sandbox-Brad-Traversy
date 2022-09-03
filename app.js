@@ -773,70 +773,114 @@
 //   // 404: "Not Found"
 // }
 
-document.getElementById('button1').addEventListener('click', loadCustomer);
+// document.getElementById('button1').addEventListener('click', loadCustomer);
 
-document.getElementById('button2').addEventListener('click', loadCustomers);
+// document.getElementById('button2').addEventListener('click', loadCustomers);
 
-// Load Customer
+// // Load Customer
 
-function loadCustomer(e) {
-  const xhr = new XMLHttpRequest();
+// function loadCustomer(e) {
+//   const xhr = new XMLHttpRequest();
 
-  xhr.open('GET', 'customer.json', true);
+//   xhr.open('GET', 'customer.json', true);
 
-  xhr.onload = function () {
-    if (this.status === 200) {
-      const customer = JSON.parse(this.responseText);
+//   xhr.onload = function () {
+//     if (this.status === 200) {
+//       const customer = JSON.parse(this.responseText);
 
-      const output = `
-        <ul>
-          <li>
-            ID: ${customer.id}
-          </li>
-          <li>Name: ${customer.name}
-          </li>
-          <li>Company: ${customer.company}</li>
-          <li>Phone: ${customer.phone}</li>
-        </ul>
-      `;
+//       const output = `
+//         <ul>
+//           <li>
+//             ID: ${customer.id}
+//           </li>
+//           <li>Name: ${customer.name}
+//           </li>
+//           <li>Company: ${customer.company}</li>
+//           <li>Phone: ${customer.phone}</li>
+//         </ul>
+//       `;
 
-      document.getElementById('customer').innerHTML = output;
-    }
-  };
+//       document.getElementById('customer').innerHTML = output;
+//     }
+//   };
 
-  xhr.send();
+//   xhr.send();
+// }
+
+// // Load Customers
+
+// function loadCustomers(e) {
+//   const xhr = new XMLHttpRequest();
+
+//   xhr.open('GET', 'customers.json', true);
+
+//   xhr.onload = function () {
+//     if (this.status === 200) {
+//       const customers = JSON.parse(this.responseText);
+
+//       let output = '';
+
+//       customers.forEach(function (customer) {
+//         output += `
+//         <ul>
+//           <li>
+//             ID: ${customer.id}
+//           </li>
+//           <li> Name: ${customer.name}
+//           </li>
+//           <li> Company: ${customer.company}</li>
+//           <li> Phone: ${customer.phone}</li>
+//         </ul>
+//       `;
+//       });
+
+//       document.getElementById('customer').innerHTML = output;
+//     }
+//   };
+
+//   xhr.send();
+// }
+
+const posts = [
+  { title: 'Post One', body: 'This is post one' },
+  { title: 'Post Two', body: 'This is post two' },
+];
+
+// function createPost(post) {
+//   setTimeout(function () {
+//     posts.push(post);
+//   }, 2000);
+// }
+
+// function getPosts() {
+//   setTimeout(function () {
+//     let output = '';
+//     posts.forEach(function (post) {
+//       output += `<li>${post.title}</li>`;
+//     });
+//     document.body.innerHTML = output;
+//   }, 1000);
+// }
+
+// createPost({ title: 'Post Three', body: 'This is post three' });
+
+// getPosts();
+
+function createPost(post, callback) {
+  setTimeout(function () {
+    posts.push(post);
+    callback();
+  }, 2000);
 }
 
-// Load Customers
-
-function loadCustomers(e) {
-  const xhr = new XMLHttpRequest();
-
-  xhr.open('GET', 'customers.json', true);
-
-  xhr.onload = function () {
-    if (this.status === 200) {
-      const customers = JSON.parse(this.responseText);
-
-      let output = '';
-
-      customers.forEach(function (customer) {
-        output += `
-        <ul>
-          <li>
-            ID: ${customer.id}
-          </li>
-          <li> Name: ${customer.name}
-          </li>
-          <li> Company: ${customer.company}</li>
-          <li> Phone: ${customer.phone}</li>
-        </ul>
-      `;
-      });
-
-      document.getElementById('customer').innerHTML = output;
-    }
-  };
-
-  xhr.send();
+function getPosts() {
+  setTimeout(function () {
+    let output = '';
+    posts.forEach(function (post) {
+      output += `<li>${post.title}</li>`;
+    });
+    document.body.innerHTML = output;
+  }, 1000);
 }
+
+createPost({ title: 'Post Three', body: 'This is post three' }, getPosts);
