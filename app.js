@@ -1013,15 +1013,42 @@
 //   .then((res) => console.log(res))
 //   .catch((err) => console.log(err));
 
-async function getUsers() {
-  // await response of the fetch call
-  const response = await fetch('https://jsonplaceholder.typicode.com/users');
+// async function getUsers() {
+//   // await response of the fetch call
+//   const response = await fetch('https://jsonplaceholder.typicode.com/users');
 
-  // Only proceed once its resolved
-  const data = await response.json();
+//   // Only proceed once its resolved
+//   const data = await response.json();
 
-  // Only proceed once secound promise is resovled
-  return data;
+//   // Only proceed once secound promise is resovled
+//   return data;
+// }
+
+// getUsers().then((users) => console.log(users));
+
+const user = { email: 'jdoe@gmail.com' };
+
+try {
+  // Produce a referenceError
+  // myFunction();
+  // Produce a TypeError
+  // null.myFunction();
+  // Will produce SyntaxError
+  // eval('Hello World');
+  // Will produce a URIError
+  // decodeURIComponent('%');
+
+  if (!user.name) {
+    // throw 'User has no name';
+    throw new SyntaxError('User has no name');
+  }
+} catch (e) {
+  console.log(`User Error: ${e.message}`);
+  // console.log(e.message);
+  // console.log(e.name);
+  // console.log(e instanceof TypeError);
+} finally {
+  console.log('Finally runs reguardless of result...');
 }
 
-getUsers().then((users) => console.log(users));
+console.log('Program continues...');
