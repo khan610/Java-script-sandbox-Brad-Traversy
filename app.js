@@ -1122,8 +1122,18 @@ re = /Hel{2,}o/i; // Must occur at least {m} amount of times
 // Paretheses () - Grouping
 re = /^([0-9]x){3}$/;
 
+// Shorthand Character Classes
+re = /\w/; // Word character - alphanumeric or _
+re = /\w+/; // + = one or more
+re = /\W/; // Non-Word Character
+re = /\d/; // Match any digit
+re = /\d+/; // Match any digit 0 or more times
+re = /\D/; // Match any Non-digit
+re = /\s/; // Match white char
+re = /\S/; // Match non-whitespace char
+
 // String to match
-const str = 'Hello';
+const str = ' ';
 
 // Log Results
 const result = re.exec(str);
