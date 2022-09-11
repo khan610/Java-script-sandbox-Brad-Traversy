@@ -1131,9 +1131,14 @@ re = /\d+/; // Match any digit 0 or more times
 re = /\D/; // Match any Non-digit
 re = /\s/; // Match white char
 re = /\S/; // Match non-whitespace char
+re = /Hell\b/i; // Word boundary
+
+// Assertions
+re = /x(?=y)/; // Match x only if followed by y
+re = /x(?!y)/; // Match x only if NOT Followed by y
 
 // String to match
-const str = ' ';
+const str = 'djfdjkshfkjdsfjksdhcxy';
 
 // Log Results
 const result = re.exec(str);
