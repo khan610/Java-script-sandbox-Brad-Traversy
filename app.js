@@ -1153,3 +1153,5 @@ function reTest(re, str) {
 }
 
 reTest(re, str);
+
+console.log(`khan will rise`);
