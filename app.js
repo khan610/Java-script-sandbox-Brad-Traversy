@@ -1424,27 +1424,50 @@ map1.set(key3, 'Value of key3');
 
 // console.log(UICtrl.text);
 
-// REVELING MODULE PATTERN
-const ItemCtrl = (function () {
-  let data = [];
+// // REVELING MODULE PATTERN
+// const ItemCtrl = (function () {
+//   let data = [];
 
-  function add(item) {
-    data.push(item);
-    console.log('Item Added....');
-  }
+//   function add(item) {
+//     data.push(item);
+//     console.log('Item Added....');
+//   }
 
-  function get() {
-    return data.find((item) => {
-      return item.id === id;
-    });
+//   function get() {
+//     return data.find((item) => {
+//       return item.id === id;
+//     });
+//   }
+
+//   return {
+//     add: add,
+//     get: get,
+//   };
+// })();
+
+// ItemCtrl.add({ id: 1, name: 'John' });
+// ItemCtrl.add({ id: 2, name: 'Mark' });
+// console.log(ItemCtrl.get(1));
+
+const Singleton = (function () {
+  let instance;
+
+  function createInstance() {
+    const object = new Object('Object instance!!!');
+    return object;
   }
 
   return {
-    add: add,
-    get: get,
+    getInstance: function () {
+      if (!instance) {
+        instance = createInstance();
+      }
+      return instance;
+    },
   };
 })();
 
-ItemCtrl.add({ id: 1, name: 'John' });
-ItemCtrl.add({ id: 2, name: 'Mark' });
-console.log(ItemCtrl.get(1));
+const instanceA = Singleton.getInstance();
+const instanceB = Singleton.getInstance();
+
+console.log(instanceA === instanceB);
