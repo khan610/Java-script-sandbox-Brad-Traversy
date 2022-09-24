@@ -1349,45 +1349,102 @@ map1.set(key3, 'Value of key3');
 
 // SETS - Store unique Values of any type
 
-const set1 = new Set();
+// const set1 = new Set();
 
-// Add values to set
-set1.add(100);
-set1.add('A string');
-set1.add({ name: 'John' });
-set1.add(true);
-set1.add(100);
+// // Add values to set
+// set1.add(100);
+// set1.add('A string');
+// set1.add({ name: 'John' });
+// set1.add(true);
+// set1.add(100);
 
-// const set2 = new Set([1, true, 'string']);
-// console.log(set2);
+// // const set2 = new Set([1, true, 'string']);
+// // console.log(set2);
 
-console.log(set1);
+// console.log(set1);
 
-// Get count
-console.log(set1.size);
+// // Get count
+// console.log(set1.size);
 
-// Check for values
-console.log(set1.has(100));
-console.log(set1.has(50 + 50));
-console.log(set1.has({ name: 'John' }));
+// // Check for values
+// console.log(set1.has(100));
+// console.log(set1.has(50 + 50));
+// console.log(set1.has({ name: 'John' }));
 
-// Delete from set
-set1.delete(100);
+// // Delete from set
+// set1.delete(100);
 
-console.log(set1);
+// console.log(set1);
 
-// ITERATING THROUGH SET
+// // ITERATING THROUGH SET
 
-// For..of
-for (let item of set1.keys()) {
-  console.log(item);
-}
+// // For..of
+// for (let item of set1.keys()) {
+//   console.log(item);
+// }
 
-// ForEach Loop
-set1.forEach((value) => {
-  console.log(item);
-});
+// // ForEach Loop
+// set1.forEach((value) => {
+//   console.log(item);
+// });
 
-// CONVERT SET TO ARRAY
-const setArr = Array.from(set1);
-console.log(setArr);
+// // CONVERT SET TO ARRAY
+// const setArr = Array.from(set1);
+// console.log(setArr);
+
+// Basic structure
+
+// (function () {
+//   // Declare private vars and functions
+
+//   return {
+//     // Declare public var and functions
+//   };
+// })();
+
+// // STANDARD MODULE PATTERN
+// const UICtrl = (function () {
+//   let text = 'Hello World';
+
+//   const changeText = function () {
+//     const element = document.querySelector('h1');
+//     element.textContent = text;
+//   };
+
+//   return {
+//     callChangeText: function () {
+//       changeText();
+//       // console.log(text);
+//     },
+//   };
+// })();
+
+// UICtrl.callChangeText();
+// // UICtrl.changeText()
+
+// console.log(UICtrl.text);
+
+// REVELING MODULE PATTERN
+const ItemCtrl = (function () {
+  let data = [];
+
+  function add(item) {
+    data.push(item);
+    console.log('Item Added....');
+  }
+
+  function get() {
+    return data.find((item) => {
+      return item.id === id;
+    });
+  }
+
+  return {
+    add: add,
+    get: get,
+  };
+})();
+
+ItemCtrl.add({ id: 1, name: 'John' });
+ItemCtrl.add({ id: 2, name: 'Mark' });
+console.log(ItemCtrl.get(1));
