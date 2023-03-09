@@ -142,41 +142,121 @@
 // console.log(numbers);
 // console.log(val);
 
-const person = {
-  firstName: 'Steve',
-  lastName: 'Smith',
-  age: 30,
-  email: 'steve@aol.com',
-  hobbies: ['music', 'sports'],
-  adress: {
-    city: 'Miami',
-    state: 'FL',
-  },
-  getBirthYear: function () {
-    return 2017 - this.age;
-  },
-};
+// const person = {
+//   firstName: 'Steve',
+//   lastName: 'Smith',
+//   age: 30,
+//   email: 'steve@aol.com',
+//   hobbies: ['music', 'sports'],
+//   adress: {
+//     city: 'Miami',
+//     state: 'FL',
+//   },
+//   getBirthYear: function () {
+//     return 2017 - this.age;
+//   },
+// };
 
-let val;
+// let val;
 
-val = person;
-// Get specific value
-val = person.firstName;
-val = person['firstName'];
-val = person.age;
-val = person.hobbies[1];
-val = person.adress.state;
-val = person.adress['city'];
-val = person.getBirthYear();
+// val = person;
+// // Get specific value
+// val = person.firstName;
+// val = person['firstName'];
+// val = person.age;
+// val = person.hobbies[1];
+// val = person.adress.state;
+// val = person.adress['city'];
+// val = person.getBirthYear();
 
-console.log(val);
+// console.log(val);
 
-const people = [
-  { name: 'John', age: 30 },
-  { name: 'Mike', age: 23 },
-  { name: 'Khan', age: 34 },
-];
+// const people = [
+//   { name: 'John', age: 30 },
+//   { name: 'Mike', age: 23 },
+//   { name: 'Khan', age: 34 },
+// ];
 
-for (let i = 0; i < people.length; i++) {
-  console.log(people[i].name);
+// for (let i = 0; i < people.length; i++) {
+//   console.log(people[i].name);
+// }
+
+const id = 100;
+
+// // EQUAL TO
+// if (id == 100) {
+//   console.log('CORRECT');
+// } else {
+//   console.log('INCORRECT');
+// }
+
+// // NOT EQUAL TO
+// if (id != 101) {
+//   console.log('CORRECT');
+// } else {
+//   console.log('INCORRECT');
+// }
+
+// // EQUAL TO VALUE & TYPE
+// if (id === 100) {
+//   console.log('CORRECT');
+// } else {
+//   console.log('INCORRECT');
+// }
+
+// // NOT EQUAL TO VALUE & TYPE
+// if (id !== 100) {
+//   console.log('CORRECT');
+// } else {
+//   console.log('INCORRECT');
+// }
+
+// Test if UNDEFINED
+// if (typeof id) {
+//   console.log(`The ID is ${id}`);
+// } else {
+//   console.log('NO ID');
+// }
+
+// GREATER OR LESS THAN
+// if (id <= 200) {
+//   console.log('CORRECT');
+// } else {
+//   console.log('INCORRECT');
+// }
+
+// IF ELSE
+
+const color = 'yellow';
+
+// if (color === 'red') {
+//   console.log('Color is red');
+// } else if (color === 'blue') {
+//   console.log('Color is blue');
+// } else {
+//   console.log('Color is not red or blue');
+// }
+
+// LOGICAL OPERATORS
+
+const name = 'Steve';
+const age = '20';
+
+// AND &&
+if (age > 0 && age < 12) {
+  console.log(`${name} is a child`);
+} else if (age >= 13 && age <= 19) {
+  console.log(`${name} is a teenager`);
+} else {
+  console.log(`${name} is an adult`);
 }
+
+// OR ||
+if (age < 16 || age > 65) {
+  console.log(`${name} can not run in race`);
+} else {
+  console.log(`${name} is registered for the race`);
+}
+
+// TERNARY OPERATOR
+console.log(id === 100 ? 'CORRECT' : 'INCORRECT');
